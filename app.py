@@ -38,7 +38,7 @@ def home():
 def get_bot_response():
   
     user_prompt = request.args.get('prompt')
-    user_query = f'Get the resolution for the Issue or Problem: {user_prompt} and then Compose the response in two parts Issue:   Resolution: ' 
+    user_query = f'Get the resolution for the Issue or Problem: {user_prompt} and then Compose the response in two parts Issue:   Resolution: . Make a JSON object using the two parts ' 
     result = query_kb(index,user_query)
     return result
 if __name__ == "__main__":
